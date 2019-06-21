@@ -1,4 +1,5 @@
 // Business Logic
+
 var Pizza = function(forName, forAddress, size, cheese, pepperoni, sausage, canadianBacon, bacon, chicken, pineapple, mushrooms, onions, peppers, olives, jalapenos){
     this.forName = forName;
     this.forAddress = forAddress;
@@ -17,7 +18,7 @@ var Pizza = function(forName, forAddress, size, cheese, pepperoni, sausage, cana
     this.jalapenos = jalapenos;
     } 
 
-    Pizza.prototype.pricing = function(){
+Pizza.prototype.pricing = function(){
         
         var totalPrice = 0;
     // size
@@ -144,8 +145,6 @@ var Pizza = function(forName, forAddress, size, cheese, pepperoni, sausage, cana
 
     return totalPrice;
 }
-
-
 Pizza.prototype.itemize = function(){
     var itemizedArray = [];   
     
@@ -271,8 +270,6 @@ Pizza.prototype.itemize = function(){
     return itemizedArray;
 }
 
-
-
 // Front End
 $(document).ready(function(){
     $("#pizzaForm").submit(function(event){
@@ -284,7 +281,7 @@ $(document).ready(function(){
 
         $("#receiptPopulate").html("<h4>Hey there, " + userPizza.forName + "!</h4><br><h5>Your order is on the way to " + userPizza.forAddress + ".</h5><br><br><h3>Here is your receipt:</h3><br><h5>Your total today is $" + userPizzaPrice + ".00.</h5><br><h3>Items:</h3><br><h5> " + userPizzaArray[0] + "</h5><br><h5>" + userPizzaArray[1] + "</h5><br><h5>" + userPizzaArray[2] + "</h5><br><h5>" + userPizzaArray[3] + "</h5><br><h5>" + userPizzaArray[4] + "</h5><br><h5>" + userPizzaArray[5] + "</h5><br><h5>" + userPizzaArray[6] + "</h5><br><h5>" + userPizzaArray[7] + "</h5><br><h5>" + userPizzaArray[8] + "</h5><br><h5>" + userPizzaArray[9] + "</h5><br><h5>" + userPizzaArray[10] + "</h5><br><h5>" + userPizzaArray[11] + "</h5><br><h5>" + userPizzaArray[12] + "</h5>")
         
-        $("#receiptDescriptor").slideUp(100);
+        $("#placeOrderCard").slideUp(100);
         $("#receiptCard").slideDown(500);
         event.preventDefault();
         
@@ -298,6 +295,12 @@ $(document).ready(function(){
     $("#constructButton").click(function(){
         $("#hiddenPizzaForm").slideDown(500);
         $("#startPage").slideUp(500);
+    });
+    $("#createOrder").click(function(){
+        $("#receiptDescriptor").slideUp(100);
+        $("#placeOrderCard").slideDown(500);
+        $("#receiptCard").hide();
+
     });
     
 });

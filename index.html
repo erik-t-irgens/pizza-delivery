@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+      <link href="https://fonts.googleapis.com/css?family=Carter+One|Monoton&display=swap" rel="stylesheet">
       <script src="js/jquery-3.4.1.js"></script>
       <script src = "js/bootstrap.js"></script>
       <script src = "js/scripts.js"></script>
@@ -11,10 +12,10 @@
     <body>
         <div class="container-fluid">
             
-            <div class="card bg-success text-white ">
+            <div class="card bg-success text-white" id="backMostCard">
                 <div class="card bg-dark align-items-center" id="startPage">
                     <form id="pizzaForm">
-                    <div class="card-title"><h1>Welcome to Pizza Planetarium!</h1></div> 
+                    <div class="card-title" id="titleStyle"><img src="https://images.vexels.com/media/users/3/128437/isolated/preview/2dd809b7c15968cb7cc577b2cb49c84f-pizza-food-restaurant-logo-by-vexels.png" alt="A picture of our logo"></div> 
             
             <div class="card bg-secondary">
                 <div class="card-title bg-success"><h2>Let's get started!</h2></div> 
@@ -35,7 +36,7 @@
                         </div>
                     </div>
                     <br>
-                    <button type="button" class="btn btn-outline-success" id="continueButton">Continue...</button>
+                    <button type="button" class="btn btn-lg btn-outline-success" id="continueButton">Continue...</button>
                 </div>
             </div>
 
@@ -49,8 +50,8 @@
                         </div>
 
                         <div class="card-body">
-                            <img src="https://cms.barrospizza.com/wp-content/uploads/2018/08/Homepage-Header_Kona-2.png" alt="a picture of a pizza">
-                            <button type="button" class="btn btn-outline-success" id="constructButton">Construct...</button>
+                            <img src="https://cms.barrospizza.com/wp-content/uploads/2018/08/Homepage-Header_Kona-2.png" alt="a picture of a pizza"><br>
+                            <button type="button" class="btn btn-outline-success btn-lg" id="constructButton">Construct...</button>
                    
                         </div>
                     </div>
@@ -104,7 +105,7 @@
                                 <label class="btn btn-outline-secondary">
                                     <input type="radio" name="cheese"  value="1" checked> None
                                 </label>
-                                <label class="btn btn-outline-secondary active">
+                                <label class="btn btn-outline-secondary">
                                     <input type="radio" name="cheese" value="2"> Regular
                                 </label>
                                 <label class="btn btn-outline-secondary">
@@ -312,7 +313,7 @@
                             </div>
                             <br>
                         </div>
-                            <button type="submit" class="btn btn-outline-success buttonStretched">Create Pizza!</button>
+                            <button type="button" class="btn btn-lg btn-outline-success buttonStretched" id="createOrder">Create Pizza!</button>
 
                         </div>
                     </div>
@@ -323,6 +324,15 @@
                 <div class="col-sm-6 offset-2 offset-sm-6 col-2 h-100 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top " id="rightSide">
                     
                     <div id="receiptDescriptor"  class="border border-success borderPadding" ><h1>Construct!</h1><br><h4>Fill out the form to the left. When you're done, hit "Create Pizza!"</h4></div>
+                    
+                    <div class="card bg-secondary" id="placeOrderCard">
+                            <div class="card-header bg-success" id="placeOrderCardHeader">
+                                <h1>Place order?</h1>
+                            </div>
+                            <div class="card-body" id="placeOrderPopulate"><h3>Hey there! Are you ready to place your order? If so, go ahead and hit place order!</h3></div>
+                            <button type="submit" class="btn btn-lg btn-outline-success buttonStretched" id="placeOrderButton">Place Order!</button>
+                        </div>
+                    
                     
                     <div class="card bg-success" id="receiptCard">
                         <div class="card-header" id="receiptCardHeader">
