@@ -29,7 +29,7 @@ body, html {
 }
 
 #hiddenPizzaForm {
-    /* display: none; */
+    display: none;
 }
 
 #receiptCardHeader, #orderFormHeader {
@@ -39,11 +39,10 @@ body, html {
 #receiptCard {
     width: 750px;
     height: 750px;
-    
+    display: none;
 }
 
 #receiptDescriptor {
-    /* display: none; */
 }
 
 #formArea {
@@ -57,5 +56,13 @@ body, html {
     height: 100vh;
     width: 90vh;
     text-align: center;
+    align-self: center;
 }
 
+#chooseOptionCard {
+    display: none;
+}
+
+.card {
+    margin-top: 10px;
+}

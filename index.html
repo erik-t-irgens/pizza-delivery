@@ -11,8 +11,8 @@
     <body>
         <div class="container-fluid">
             
-            <div class="card bg-success text-white align-items-center">
-                <div class="card bg-dark" id="startPage">
+            <div class="card bg-success text-white ">
+                <div class="card bg-dark align-items-center" id="startPage">
                     <form id="pizzaForm">
                     <div class="card-title"><h1>Welcome to Pizza Planetarium!</h1></div> 
             
@@ -34,17 +34,28 @@
                                 
                         </div>
                     </div>
+                    <br>
+                    <button type="button" class="btn btn-outline-success" id="continueButton">Continue...</button>
                 </div>
             </div>
 
             <div class="card bg-secondary" id="chooseOptionCard">
-                    <div class="card-title bg-success"><h2>Choose an Option!</h2></div> 
-                    
-                    <div class="card-body">
-                        <h3>Who is this order for?</h3><br>
-                        
+               <div class="card-title bg-success"><h2>Choose an Option!</h2></div> 
+                
+                <div class="card-body">
+                    <div class="card bg-dark">
+                        <div class="card-title bg-success">
+                            <h3>Construct your own!</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <img src="https://cms.barrospizza.com/wp-content/uploads/2018/08/Homepage-Header_Kona-2.png" alt="a picture of a pizza">
+                            <button type="button" class="btn btn-outline-success" id="constructButton">Construct...</button>
+                   
+                        </div>
                     </div>
                 </div>
+            </div>
         </div>
             
 
@@ -61,10 +72,10 @@
                     <div class="card-body bg-dark text-white">
 
                        
-                         <div id="sizeQuestion">
+                         <div class="border border-success borderPadding" id="sizeQuestion">
 
                            
-                           <h3 class="border border-success borderPadding">Size of Pizza</h3>
+                           <h3>Size of Pizza</h3>
                            
                            <div class="btn-group btn-group-toggle buttonStretched" data-toggle="buttons" >
                                <label class="btn btn-outline-secondary">
@@ -83,7 +94,7 @@
                         </div> 
                             
                             <br>
-                            
+                        <div class="border border-success borderPadding">
                             <div class="formCategoryHeaders"><h3>Toppings</h3></div>
 
                         <!-- CHEESE -->
@@ -300,7 +311,7 @@
                                 </div>
                             </div>
                             <br>
-
+                        </div>
                             <button type="submit" class="btn btn-outline-success buttonStretched">Create Pizza!</button>
 
                         </div>
@@ -309,17 +320,17 @@
                 
                 
                 <div class="col-sm-6 invisible col-2"><!--hidden spacer--></div>
-                <div class="col-sm-6 offset-2 offset-sm-6 col-2 h-100 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top invisible" id="rightSide">
+                <div class="col-sm-6 offset-2 offset-sm-6 col-2 h-100 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top " id="rightSide">
                     
-                    
+                    <div id="receiptDescriptor"  class="border border-success borderPadding" ><h1>Construct!</h1><br><h4>Fill out the form to the left. When you're done, hit "Create Pizza!"</h4></div>
                     
                     <div class="card bg-success" id="receiptCard">
                         <div class="card-header" id="receiptCardHeader">
                             <h1>Your Order!</h1>
                         </div>
+                        <div class="card-body" id="receiptPopulate"></div>
                     </div>
                     
-                    <!-- Insert shit here about pricing information. Card that displays price, and contents of what was ordered. Locations, etc. -->
                 </div>
             </form>
             </div>
