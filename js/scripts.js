@@ -149,9 +149,18 @@ var largePepperoni = new Pizza ("", "", 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 var largeCheese = new Pizza ("", "", 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 var largeMeatLovers = new Pizza ("", "", 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1)
 var largeHawaiian = new Pizza ("", "" , 3, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2)
-console.log(largePepperoni.pricing());
-console.log(largeCheese.pricing());
-console.log(largeMeatLovers.pricing());
-console.log(largeHawaiian.pricing());
 
-var userPizza = new Pizza ()
+$(document).ready(function(){
+    $("#pizzaForm").submit(function(event){
+        var userPizza = new Pizza ($("#nameField").val(), $("#addressField").val(), parseInt($("input:radio[name=size]:checked").val()), parseInt($("input:radio[name=cheese]:checked").val()), parseInt($("input:radio[name=pepperoni]:checked").val()), parseInt($("input:radio[name=sausage]:checked").val()), parseInt($("input:radio[name=canadianBacon]:checked").val()), parseInt($("input:radio[name=bacon]:checked").val()), parseInt($("input:radio[name=chicken]:checked").val()), parseInt($("input:radio[name=pineapple]:checked").val()), parseInt($("input:radio[name=mushrooms]:checked").val()), parseInt($("input:radio[name=onions]:checked").val()), parseInt($("input:radio[name=peppers]:checked").val()), parseInt($("input:radio[name=olives]:checked").val()), parseInt($("input:radio[name=jalapenos]:checked").val()));
+        console.log(userPizza.pricing());
+        event.preventDefault();
+
+        console.log(userPizza.forName, userPizza.forAddress, userPizza.size);
+        console.log($("#nameField").val());
+    });
+
+// Button logic for non-submit buttons
+
+});
+

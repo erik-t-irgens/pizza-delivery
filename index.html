@@ -4,44 +4,61 @@
       <script src="js/jquery-3.4.1.js"></script>
       <script src = "js/bootstrap.js"></script>
       <script src = "js/scripts.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title></title>
-  </head>
-  <body>
-    <div class="container-fluid">
-    
-    <div class="card bg-success text-white align-items-center" id="startPage">
-        <div class="card bg-dark">
-            <h1>Welcome to Pizza Planetarium!</h1>
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <title></title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            
+            <div class="card bg-success text-white align-items-center">
+                <div class="card bg-dark" id="startPage">
+                    <form id="pizzaForm">
+                    <div class="card-title"><h1>Welcome to Pizza Planetarium!</h1></div> 
+            
+            <div class="card bg-secondary">
+                <div class="card-title bg-success"><h2>Let's get started!</h2></div> 
+                
+                <div class="card-body">
+                    <h3>Who is this order for?</h3><br>
+                    <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <div class="input-group-text" id="btnGroupAddon2">Name</div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="First and Last name"  aria-describedby="btnGroupAddon2" id="nameField"><br>
+                            <div class="input-group-prepend">
+                            <div class="input-group-text" id="btnGroupAddon2">Address</div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Full Address"  aria-describedby="btnGroupAddon2" id="addressField">
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-secondary" id="chooseOptionCard">
+                    <div class="card-title bg-success"><h2>Choose an Option!</h2></div> 
+                    
+                    <div class="card-body">
+                        <h3>Who is this order for?</h3><br>
+                        
+                    </div>
+                </div>
         </div>
+            
 
-        <div class="card bg-dark">
-            <h3>Let's get started!</h3>
-        </div>
-
-        <div class="card bg-dark">
-                <h1>Welcome to Pizza Planetarium!</h1>
-        </div>
-
-
-
-
-    </div>
     
     
     
-    
-    
-        <div class="card bg-success">
+        <div class="card bg-success" id="hiddenPizzaForm">
 
-        <div class="row h-100" id="hiddenPizzaForm">
+        <div class="row h-100" >
             <div class="col bg-success py-2" id="formArea">
 
                 <div class="card bg-dark">
                     <div class="card-header bg-dark text-white" id="orderFormHeader"><h1>Construct Your Pizza!</h1></div>
                     <div class="card-body bg-dark text-white">
-                        <form id="pizzaForm">
 
                        
                          <div id="sizeQuestion">
@@ -286,30 +303,28 @@
 
                             <button type="submit" class="btn btn-outline-success buttonStretched">Create Pizza!</button>
 
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            
-            <div class="col-sm-6 invisible col-2"><!--hidden spacer--></div>
-            <div class="col-sm-6 offset-2 offset-sm-6 col-2 h-100 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top" id="rightSide">
                 
                 
-                
-                <div class="card bg-success" id="receiptCard">
-                    <div class="card-header" id="receiptCardHeader">
-                        <h1>Your Order!</h1>
-                    </div>
-                    <h3 id="receiptDescriptor">When you're done constructing, hit "Order" and your receipt will appear here!</h3>
+                <div class="col-sm-6 invisible col-2"><!--hidden spacer--></div>
+                <div class="col-sm-6 offset-2 offset-sm-6 col-2 h-100 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top invisible" id="rightSide">
                     
+                    
+                    
+                    <div class="card bg-success" id="receiptCard">
+                        <div class="card-header" id="receiptCardHeader">
+                            <h1>Your Order!</h1>
+                        </div>
+                    </div>
+                    
+                    <!-- Insert shit here about pricing information. Card that displays price, and contents of what was ordered. Locations, etc. -->
                 </div>
-                
-                <!-- Insert shit here about pricing information. Card that displays price, and contents of what was ordered. Locations, etc. -->
+            </form>
             </div>
+            
         </div>
-        
     </div>
-    </div>
-  </body>
+</body>
 </html>
