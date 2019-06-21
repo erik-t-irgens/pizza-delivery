@@ -2,6 +2,45 @@ body, html {
     height: 100%;
 }
 
+#rightSide {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+#sizeQuestion, .formCategoryHeaders {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.buttonStretched {
+    width: 100%;
+}
+
+.buttonToppings{
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+    text-align: center !important;
+}
+
 #hiddenPizzaForm {
     /* display: none; */
+}
+
+#receiptCardHeader, #orderFormHeader {
+    text-align: center; 
+}
+
+#receiptCard {
+    width: 750px;
+    height: 750px;
+}
+
+#receiptDescriptor {
+    display: none;
+}
+
+#formArea {
+    height: 100vh;
 }

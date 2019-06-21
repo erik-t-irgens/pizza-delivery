@@ -1,28 +1,292 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src = "js/bootstrap.js"></script>
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src = "js/scripts.js"></script>
+      <script src="js/jquery-3.4.1.js"></script>
+      <script src = "js/bootstrap.js"></script>
+      <script src = "js/scripts.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <title></title>
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row h-100" id="hiddenPizzaForm">
-            <div class="col  py-2">
-                    <!-- Insert form and pictures -->
-        
+    <div class="card bg-success">
+
+        <div class="row h-100" id="hiddenPizzaForm">
+            <div class="col bg-success py-2" id="formArea">
+
+                <div class="card bg-dark">
+                    <div class="card-header bg-dark text-white" id="orderFormHeader"><h1>Construct Your Pizza!</h1></div>
+                    <div class="card-body bg-dark text-white">
+                        <form id="pizzaForm">
+
+                       
+                         <div id="sizeQuestion">
+
+                           
+                           <h3>Size of Pizza</h3>
+                           
+                           <div class="btn-group btn-group-toggle buttonStretched" data-toggle="buttons" >
+                               <label class="btn btn-outline-secondary">
+                                   <input type="radio" name="size"  value="1" checked> Small
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="size" value="2"> Medium
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="size"  value="3"> Large
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="size"  value="4"> Xtra-Large
+                                </label>
+                            </div>
+                        </div> 
+                            
+                            <br>
+                            
+                            <div class="formCategoryHeaders"><h3>Toppings</h3></div>
+
+                        <!-- CHEESE -->
+                        <div id="cheese">
+                            <label class="labelStyle buttonToppings">Cheese</label><br>
+                            <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="cheese"  value="1" checked> None
+                                </label>
+                                <label class="btn btn-outline-secondary active">
+                                    <input type="radio" name="cheese" value="2"> Regular
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="cheese"  value="3"> Xtra
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+
+
+                        <div class="formCategoryHeaders"><h4>Meats</h4></div>
+                        <!-- PEPPERONI -->
+
+                        <div id="pepperoni">
+                            <label class="labelStyle buttonToppings">Pepperoni</label><br>
+                            <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                <label class="btn btn-outline-secondary active">
+                                    <input type="radio" name="pepperoni"  value="1" checked> None
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="pepperoni" value="2"> Regular
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" name="pepperoni"  value="3"> Xtra
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- sausage -->
+
+                        <div id="sausage">
+                                <label class="labelStyle buttonToppings">Sausage</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="sausage"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="sausage" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="sausage"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                        <!-- canadianBacon -->
+
+                        <div id="canadianBacon">
+                                <label class="labelStyle buttonToppings">Canadian Bacon</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="canadianBacon"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="canadianBacon" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="canadianBacon"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- bacon -->
+
+                        <div id="bacon">
+                                <label class="labelStyle buttonToppings">Bacon</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="bacon"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="bacon" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="bacon"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- chicken -->
+
+                        <div id="chicken">
+                                <label class="labelStyle buttonToppings">Chicken</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="chicken"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="chicken" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="chicken"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="formCategoryHeaders"><h4>Veggies</h4></div>
+                        <!-- Pineapple -->
+
+                        <div id="pineapple">
+                                <label class="labelStyle buttonToppings">Pineapple</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="pineapple"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="pineapple" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="pineapple"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- mushrooms -->
+
+                        <div id="mushrooms">
+                                <label class="labelStyle buttonToppings">Mushrooms</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="mushrooms"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="mushrooms" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="mushrooms"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- onions -->
+
+                        <div id="onions">
+                                <label class="labelStyle buttonToppings">Onions</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="onions"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="onions" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="onions"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- peppers -->
+
+                        <div id="peppers">
+                                <label class="labelStyle buttonToppings">Peppers</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="peppers"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="peppers" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="peppers"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- olives -->
+
+                        <div id="olives">
+                                <label class="labelStyle buttonToppings">Olives</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="olives"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="olives" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="olives"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                        <!-- jalapenos -->
+
+                        <div id="jalapenos">
+                                <label class="labelStyle buttonToppings">Jalapenos</label><br>
+                                <div class="btn-group btn-group-toggle buttonToppings" data-toggle="buttons">
+                                    <label class="btn btn-outline-secondary active">
+                                        <input type="radio" name="jalapenos"  value="1" checked> None
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="jalapenos" value="2"> Regular
+                                    </label>
+                                    <label class="btn btn-outline-secondary">
+                                        <input type="radio" name="jalapenos"  value="3"> Xtra
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-success buttonStretched">Create Pizza!</button>
+
+                        </form>
+                    </div>
+                </div>
             </div>
-
-
+            
+            
             <div class="col-sm-6 invisible col-2"><!--hidden spacer--></div>
             <div class="col-sm-6 offset-2 offset-sm-6 col-2 h-100 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top" id="rightSide">
-                    <!-- Insert shit here about pricing information. Card that displays price, and contents of what was ordered. Locations, etc. -->
+                
+                
+                
+                <div class="card bg-success" id="receiptCard">
+                    <div class="card-header" id="receiptCardHeader">
+                        <h1>Your Order!</h1>
+                    </div>
+                    <h3 id="receiptDescriptor">When you're done constructing, hit "Order" and your receipt will appear here!</h3>
+                    
+                </div>
+                
+                <!-- Insert shit here about pricing information. Card that displays price, and contents of what was ordered. Locations, etc. -->
             </div>
-      </div>
-
+        </div>
+        
+    </div>
     </div>
   </body>
 </html>
