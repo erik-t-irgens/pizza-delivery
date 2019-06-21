@@ -8,6 +8,10 @@ body, html {
     bottom: 0;
 }
 
+.borderPadding{
+    padding: 10px;
+}
+
 #sizeQuestion, .formCategoryHeaders {
     text-align: center;
     padding-bottom: 20px;
@@ -43,4 +47,7 @@ body, html {
 
 #formArea {
     height: 100vh;
+}
+#startPage {
+    display: none;
 }
